@@ -1,4 +1,4 @@
-package net.satan.deco_bm.block;
+package net.satan.deco_ci.block;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
@@ -30,7 +30,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.satan.deco_bm.DecoConfig;
+import net.satan.deco_ci.CIConfig;
 
 import java.util.*;
 
@@ -50,7 +50,7 @@ public class TemplateCurtainBlock extends IronBarsBlock {
     protected final boolean rodCollision;
     private final Object2IntMap<BlockState> stateToIndex = new Object2IntOpenHashMap<>();
 
-    public TemplateCurtainBlock (Properties properties, boolean rodNoCollision){
+    public TemplateCurtainBlock(Properties properties, boolean rodNoCollision){
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false))
                 .setValue(EAST, Boolean.valueOf(false))
@@ -194,7 +194,7 @@ public class TemplateCurtainBlock extends IronBarsBlock {
         Queue<BlockPos> toProcess = new ArrayDeque<>();
         toProcess.add(pos);
         visited.add(pos);
-        int limit = DecoConfig.curtainLimit;
+        int limit = CIConfig.curtainLimit;
         while (!toProcess.isEmpty()) {
             if (limit <= 0) {
                 break;
