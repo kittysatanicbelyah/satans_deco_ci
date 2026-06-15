@@ -1,0 +1,14 @@
+{
+	"format_version": "1.9.0",
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"from": [8, 0, 8],
+			"to": [8, 16, 16],
+			"faces": {
+				"east": {"uv": [0, 0, 8, 16], "texture": "#bars"},
+				"west": {"uv": [8, 0, 0, 16], "texture": "#bars"}
+			}
+		}
+	]
+}

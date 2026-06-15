@@ -1,0 +1,22 @@
+{
+	"format_version": "1.21.11",
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"from": [8, 0, 7],
+			"to": [8, 14, 8],
+			"faces": {
+				"east": {"uv": [8, 1, 7, 15], "texture": "#bars"},
+				"west": {"uv": [7, 1, 8, 15], "texture": "#bars"}
+			}
+		},
+		{
+			"from": [7.5, 0, 7],
+			"to": [8.5, 14, 7],
+			"faces": {
+				"north": {"uv": [7, 1, 8, 15], "texture": "#bars"},
+				"south": {"uv": [8, 1, 7, 15], "texture": "#bars"}
+			}
+		}
+	]
+}

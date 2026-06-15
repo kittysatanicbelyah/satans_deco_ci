@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "satans_deco_bm:curtain_white",
+    "satans_deco_bm:curtain_light_gray",
+    "satans_deco_bm:curtain_gray",
+    "satans_deco_bm:curtain_black",
+    "satans_deco_bm:curtain_red",
+    "satans_deco_bm:curtain_brown",
+    "satans_deco_bm:curtain_orange",
+    "satans_deco_bm:curtain_yellow",
+    "satans_deco_bm:curtain_lime",
+    "satans_deco_bm:curtain_green",
+    "satans_deco_bm:curtain_cyan",
+    "satans_deco_bm:curtain_light_blue",
+    "satans_deco_bm:curtain_blue",
+    "satans_deco_bm:curtain_purple",
+    "satans_deco_bm:curtain_magenta",
+    "satans_deco_bm:curtain_pink"
+  ]
+}
