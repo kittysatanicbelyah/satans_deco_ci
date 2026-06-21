@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
@@ -31,6 +33,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.satan.deco_ci.CIConfig;
+import net.satan.deco_ci.register.CISounds;
 
 import java.util.*;
 
@@ -38,6 +41,9 @@ public class TemplateCurtainBlock extends IronBarsBlock {
     public static final BooleanProperty UP = PipeBlock.UP;
     public static final BooleanProperty DOWN = PipeBlock.DOWN;
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
+
+    private static boolean isProcessing = false;
 
   // 0 - single; 1 - three, left; 2 -three, middle; 3 - three, right. I hate enums, sorry.
     public static final IntegerProperty POSITION = IntegerProperty.create("position", 0, 3);
@@ -61,6 +67,7 @@ public class TemplateCurtainBlock extends IronBarsBlock {
                 .setValue(OPEN, Boolean.valueOf(false))
                 .setValue(POSITION, 0)
                 .setValue(WATERLOGGED, Boolean.valueOf(false))
+                .setValue(POWERED, false)
         );
         this.rodCollision = !rodNoCollision;
         VoxelShape[] curtainCollisionShapeByIndex1;
@@ -71,7 +78,7 @@ public class TemplateCurtainBlock extends IronBarsBlock {
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_54221_) {
-        p_54221_.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, OPEN, POSITION, WATERLOGGED);
+        p_54221_.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, OPEN, POSITION, WATERLOGGED, POWERED);
     }
 
     private VoxelShape[] collisionShapes(){
@@ -162,30 +169,38 @@ public class TemplateCurtainBlock extends IronBarsBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
        if (entity.getMainHandItem().isEmpty() && !entity.isShiftKeyDown()){
-           level.playSound(entity, pos, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, 0.75F, 0.75F);
+           if (state.getValue(OPEN)) level.playSound(entity, pos, CISounds.CURTAIN_CLOSES.get(), SoundSource.BLOCKS, 0.75F, 0.75F);
+           else level.playSound(entity, pos, CISounds.CURTAIN_OPENS.get(), SoundSource.BLOCKS, 0.75F, 0.75F);
+
            boolean newOpenState = !state.getValue(OPEN);
            openCurtain(level, pos, newOpenState);
                return InteractionResult.SUCCESS;
        }
        return InteractionResult.PASS;
     }
-    private static boolean isProcessing = false;
-    private boolean wasPowered = false;
+
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
         super.neighborChanged(state, level, pos, neighborBlock, fromPos, moving);
-        if (isProcessing) return;
-        boolean isPowered = level.getBestNeighborSignal(pos) > 0;
-        if (!level.isClientSide() && isPowered && !wasPowered ) {
-            isProcessing = true;
-            try {
-                openCurtain(level, pos, !state.getValue(OPEN));
+        if (!level.isClientSide) {
+            if (isProcessing) return;
+
+            boolean wasPowered = state.getValue(POWERED);
+            boolean isPowered = level.hasNeighborSignal(pos);
+            if (isPowered && !wasPowered) {
+                if (state.getValue(OPEN)) level.playSound((Entity) null, pos, CISounds.CURTAIN_CLOSES.get(), SoundSource.BLOCKS, 0.75F, 0.75F);
+                else level.playSound((Entity) null, pos, CISounds.CURTAIN_OPENS.get(), SoundSource.BLOCKS, 0.75F, 0.75F);
+                isProcessing = true;
+                try {
+                    openCurtain(level, pos, !state.getValue(OPEN));
+                } finally {
+                    isProcessing = false;
+                }
             }
-            finally {
-                isProcessing = false;
+            else if (!isPowered && wasPowered) {
+                level.setBlock(pos, state.setValue(POWERED, false), 2);
             }
         }
-        wasPowered = isPowered;
     }
 
     // supply methods

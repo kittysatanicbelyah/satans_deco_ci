@@ -28,14 +28,26 @@ Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [since partitioning] Add Spanish (es_es) translation
 - [since partitioning] Add Ukrainian (uk_ua) translation
 - [since partitioning] Add Portuguese (pt_pt) translation
+- [since 0.2.0] Port to 1.21.1
+- [since 0.2.0] Port to 26.x
+- [since 0.2.0] Publish on Modrinth
 
 ### Changes
 #### Unclassified
 - [since partitioning] Optimize datagen
 
-### Fixes
-- [since 0.1.0] Fix redstone power incorrect work on curtains
 
+ ## [0.2.0] - 2026-06-21
+### Added
+- Sound Events and subtitles for opening and closing of curtains
+- Publish on Curseforge
+- Logo
+
+## Fixes
+- Fix redstone power incorrect work on curtains
+- Fix translation keys of curtains
+- Fix curtains requiring correct tool to break
+- Fix curtains being uncraftable
 
  ## [0.1.0] - 2026-06-15
 _Initial Release_

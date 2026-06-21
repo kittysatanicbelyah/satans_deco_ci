@@ -1,0 +1,20 @@
+{
+  "curtain_opens": {
+    "subtitle": "sounds.satans_deco_ci.curtain_opens",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.wool.break"
+      }
+    ]
+  },
+  "curtain_closes": {
+    "subtitle": "sounds.satans_deco_ci.curtain_closes",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.wool.break"
+      }
+    ]
+  }
+}

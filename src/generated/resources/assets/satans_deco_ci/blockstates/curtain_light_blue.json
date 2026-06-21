@@ -1,0 +1,908 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_post_ends"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_post"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_cap"
+      },
+      "when": {
+        "east": "false",
+        "north": "true",
+        "open": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_down_cap"
+      },
+      "when": {
+        "east": "false",
+        "north": "true",
+        "open": "false",
+        "south": "false",
+        "up": "true",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_rod_side"
+      },
+      "when": {
+        "north": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "false",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "false",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_open_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "true",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_open_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "true",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "false",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "false",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_open_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "true",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_open_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "true",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "false",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "false",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_open_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "true",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_open_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "true",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "false",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "false",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_open_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "true",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_open_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "true",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_cap_alt"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "open": "false",
+        "south": "true",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_down_cap_alt"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "open": "false",
+        "south": "true",
+        "up": "true",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_rod_side_alt"
+      },
+      "when": {
+        "south": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "0",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "0",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_open_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "0",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_open_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "0",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "1",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "1",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_open_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "1",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_open_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "1",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "2",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "2",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_open_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "2",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_open_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "2",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "3",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "3",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_open_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "3",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_open_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "3",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_cap_alt",
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "open": "false",
+        "south": "false",
+        "up": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_down_cap_alt",
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "open": "false",
+        "south": "false",
+        "up": "true",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_rod_side_alt",
+        "y": 90
+      },
+      "when": {
+        "up": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "0",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "0",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "0",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "0",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "1",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "1",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "1",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "1",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "2",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "2",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "2",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "2",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "position": "3",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "position": "3",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "true",
+        "position": "3",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "true",
+        "position": "3",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_cap",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "north": "false",
+        "open": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_down_cap",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "north": "false",
+        "open": "false",
+        "south": "false",
+        "up": "true",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_rod_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "false",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "false",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_upper_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "true",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_single_lower_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "true",
+        "position": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "false",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "false",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_upper_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "true",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_left_lower_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "true",
+        "position": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "false",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "false",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_upper_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "true",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_middle_lower_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "true",
+        "position": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "false",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "false",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_upper_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "true",
+        "position": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_light_blue_three_right_lower_open_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "true",
+        "position": "3"
+      }
+    }
+  ]
+}

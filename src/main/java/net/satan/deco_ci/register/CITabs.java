@@ -14,9 +14,9 @@ public class CITabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB_DEFERRED_REGISTER =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, satans_deco_ci.MODID);
 //Tabs go here
-public static final RegistryObject<CreativeModeTab> PANELS_TAB = CREATIVE_MODE_TAB_DEFERRED_REGISTER.register("panels_tab",
+public static final RegistryObject<CreativeModeTab> PANELS_TAB = CREATIVE_MODE_TAB_DEFERRED_REGISTER.register("curtains_tab",
         () -> CreativeModeTab.builder().icon(() -> new ItemStack(CIBlocks.CURTAIN_BLUE.get()))
-                .title(Component.translatable("creativetab.panels_tab"))
+                .title(Component.translatable("creativetab.curtains_tab"))
                 .displayItems((ItemDisplayParameters, output) -> {
                     output.accept(CIBlocks.CURTAIN_YELLOW.get());
                     output.accept(CIBlocks.CURTAIN_WHITE.get());

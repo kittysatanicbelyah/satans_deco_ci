@@ -1,0 +1,23 @@
+{
+  "creativetab.curtains_tab": "Satan's deco Curtains",
+
+  "sounds.satans_deco_ci.curtain_opens": "Curtain Opens",
+  "sounds.satans_deco_ci.curtain_closes": "Curtain Closes",
+
+  "block.satans_deco_ci.curtain_white": "White Curtain",
+  "block.satans_deco_ci.curtain_light_gray": "Light Gray Curtain",
+  "block.satans_deco_ci.curtain_gray": "Gray Curtain",
+  "block.satans_deco_ci.curtain_black": "Black Curtain",
+  "block.satans_deco_ci.curtain_red": "Red Curtain",
+  "block.satans_deco_ci.curtain_brown": "Brown Curtain",
+  "block.satans_deco_ci.curtain_orange": "Orange Curtain",
+  "block.satans_deco_ci.curtain_yellow": "Yellow Curtain",
+  "block.satans_deco_ci.curtain_lime": "Lime Curtain",
+  "block.satans_deco_ci.curtain_green": "Green Curtain",
+  "block.satans_deco_ci.curtain_cyan": "Cyan Curtain",
+  "block.satans_deco_ci.curtain_light_blue": "Light Blue Curtain",
+  "block.satans_deco_ci.curtain_blue": "Blue Curtain",
+  "block.satans_deco_ci.curtain_purple": "Purple Curtain",
+  "block.satans_deco_ci.curtain_magenta": "Magenta Curtain",
+  "block.satans_deco_ci.curtain_pink": "Pink Curtain"
+}

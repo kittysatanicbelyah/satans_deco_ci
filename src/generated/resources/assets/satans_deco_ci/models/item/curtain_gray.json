@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "satans_deco_ci:block/curtain_gray_single_lower"
+  }
+}
