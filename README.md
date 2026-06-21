@@ -1,3 +1,5 @@
+![Curtainsanity Banner](https://github.com/kittysatanicbelyah/satans_deco_ci/blob/master/cibanner1.png)
+
 # Satan's deco: Curtainsanity
 
 ## About Satan's deco
