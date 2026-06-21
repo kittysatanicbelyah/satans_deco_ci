@@ -18,7 +18,7 @@ This part of Satan's deco adds curtains.
 - 16 dyed curtains.
 
 # Where Can I download mod?
-You can check out releases on [github](https://github.com/kittysatanicbelyah/satans_deco_ci/releases)
+You can check out releases on [github](https://github.com/kittysatanicbelyah/satans_deco_ci/releases) or download it from [Curseforge](https://www.curseforge.com/minecraft/mc-mods/satans-deco-curtainsanity).
 
 Modrinth is currently unsupported, but there are plans for it in near future.
 
