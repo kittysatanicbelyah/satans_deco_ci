@@ -15,7 +15,10 @@ It currently supports only 1.20.1, but 1.21.1 and 26.x are planned
 ## About Curtainsanity
 
 This part of Satan's deco adds curtains. 
-- 16 dyed curtains.
+- 16 dyed curtains;
+- 16 dyed curtains with edge trim;
+- 16 dyed beaded curtains;
+- 16 dyed blinds.
 
 # Where Can I download mod?
 You can check out releases on [github](https://github.com/kittysatanicbelyah/satans_deco_ci/releases) or download it from [Curseforge](https://www.curseforge.com/minecraft/mc-mods/satans-deco-curtainsanity).
