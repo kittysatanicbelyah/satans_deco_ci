@@ -12,7 +12,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-import net.satan.deco_ci.block.TemplateCurtainBlock;
+import net.satan.deco_ci.block.ThreePositionsCurtainBlock;
 import net.satan.deco_ci.register.CIBlocks;
 import net.satan.deco_ci.satans_deco_ci;
 
@@ -50,6 +50,57 @@ public class CIBlockStateProvider extends BlockStateProvider {
     curtainsBlockState(CIBlocks.CURTAIN_PURPLE);
     curtainsBlockState(CIBlocks.CURTAIN_RED);
     curtainsBlockState(CIBlocks.CURTAIN_WHITE);
+
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_BLACK);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_BLUE);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_BROWN);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_CYAN);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_YELLOW);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_GRAY);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_GREEN);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_LIGHT_BLUE);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_LIGHT_GRAY);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_MAGENTA);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_ORANGE);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_PINK);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_LIME);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_PURPLE);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_RED);
+        curtainDefaultBlockState(CIBlocks.CURTAIN_DEFAULT_WHITE);
+
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_BLACK);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_BLUE);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_BROWN);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_CYAN);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_YELLOW);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_GRAY);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_GREEN);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_LIGHT_BLUE);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_LIGHT_GRAY);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_MAGENTA);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_ORANGE);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_PINK);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_LIME);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_PURPLE);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_RED);
+        curtainBeadedBlockState(CIBlocks.CURTAIN_BEADED_WHITE);
+
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_BLACK);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_BLUE);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_BROWN);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_CYAN);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_YELLOW);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_GRAY);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_GREEN);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_LIGHT_BLUE);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_LIGHT_GRAY);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_MAGENTA);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_ORANGE);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_PINK);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_LIME);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_PURPLE);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_RED);
+        curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_WHITE);
 }
 
     private void curtainsBlockState(RegistryObject<Block> block) {
@@ -152,7 +203,7 @@ public class CIBlockStateProvider extends BlockStateProvider {
                         .condition(getOppositeProperty(dir), false)
                         .condition(getLeftProperty(dir), false)
                         .condition(getRightProperty(dir), false)
-                        .condition(TemplateCurtainBlock.OPEN, false)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
                         .condition(PipeBlock.UP, false).end()
                         .part().modelFile(alt || dir == Direction.WEST ? capDownAlt : capDown)
                         .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
@@ -160,7 +211,7 @@ public class CIBlockStateProvider extends BlockStateProvider {
                         .condition(getOppositeProperty(dir), false)
                         .condition(getLeftProperty(dir), false)
                         .condition(getRightProperty(dir), false)
-                        .condition(TemplateCurtainBlock.OPEN, false)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
                         .condition(PipeBlock.UP, true).end()
                         .part().modelFile(alt || dir == Direction.WEST ? rodSideAlt : rodSide)
                         .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
@@ -171,32 +222,320 @@ public class CIBlockStateProvider extends BlockStateProvider {
                     builder.part().modelFile(alt || dir == Direction.WEST ? sideAlts[x] : sides[x])
                             .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
                             .condition(e.getValue(), true)
-                            .condition(TemplateCurtainBlock.POSITION, x)
-                            .condition(TemplateCurtainBlock.OPEN, false)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(ThreePositionsCurtainBlock.OPEN, false)
                             .condition(PipeBlock.DOWN, true).end()
                             .part().modelFile(alt || dir == Direction.WEST ? sideAltsDown[x] : sidesDown[x])
                             .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
                             .condition(e.getValue(), true)
-                            .condition(TemplateCurtainBlock.POSITION, x)
-                            .condition(TemplateCurtainBlock.OPEN, false)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(ThreePositionsCurtainBlock.OPEN, false)
                             .condition(PipeBlock.DOWN, false).end()
                             .part().modelFile(alt || dir == Direction.WEST ? sideAltsOpen[x] : sidesOpen[x])
                             .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
                             .condition(e.getValue(), true)
-                            .condition(TemplateCurtainBlock.POSITION, x)
-                            .condition(TemplateCurtainBlock.OPEN, true)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(ThreePositionsCurtainBlock.OPEN, true)
                             .condition(PipeBlock.DOWN, true).end()
                             .part().modelFile(alt || dir == Direction.WEST ? sideAltsDownOpen[x] : sidesDownOpen[x])
                             .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
                             .condition(e.getValue(), true)
-                            .condition(TemplateCurtainBlock.POSITION, x)
-                            .condition(TemplateCurtainBlock.OPEN, true)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(ThreePositionsCurtainBlock.OPEN, true)
                             .condition(PipeBlock.DOWN, false).end();
                 }
             }
         });
     }
 
+    private void curtainDefaultBlockState(RegistryObject<Block> block) {
+        curtainDefaultBlockInternal(block.get(), block.getId().toString(),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"));
+
+    }
+    private void curtainDefaultBlockInternal(Block block, String baseName,
+                                       ResourceLocation particle, ResourceLocation bars,
+                                       ResourceLocation edge) {
+        ModelFile post = decoBlockModels.barsPost(baseName, particle, edge);
+        ModelFile postEnds = decoBlockModels.barsPostEnds(baseName, particle, edge);
+        ModelFile cap = decoBlockModels.curtainCap(baseName, particle);
+        ModelFile capAlt = decoBlockModels.curtainCapAlt(baseName, particle);
+        ModelFile rodSide = decoBlockModels.curtainRodSide(baseName, bars);
+        ModelFile rodSideAlt = decoBlockModels.curtainRodSideAlt(baseName, bars);
+        ModelFile capDown = decoBlockModels.curtainDownCap(baseName, bars);
+        ModelFile capDownAlt = decoBlockModels.curtainDownCapAlt(baseName, bars);
+
+        ModelFile side_middle = decoBlockModels.curtainSide(baseName +"_upper", particle);
+        ModelFile sideAlt_middle = decoBlockModels.curtainSideAlt(baseName +"_upper", particle);
+        ModelFile side_middleDown = decoBlockModels.curtainSide(baseName +"_lower", particle);
+        ModelFile sideAlt_middleDown = decoBlockModels.curtainSideAlt(baseName +"_lower", particle);
+
+        ModelFile side_singleOpen = decoBlockModels.curtainSide(baseName +"_upper_open", particle);
+        ModelFile sideAlt_singleOpen = decoBlockModels.curtainSideAlt(baseName +"_upper_open", particle);
+        ModelFile side_rightOpen = decoBlockModels.curtainSide(baseName +"_right_upper_open", particle);
+        ModelFile sideAlt_rightOpen = decoBlockModels.curtainSideAlt(baseName +"_right_upper_open", particle);
+        ModelFile side_leftOpen = decoBlockModels.curtainSide(baseName +"_left_upper_open", particle);
+        ModelFile sideAlt_leftOpen = decoBlockModels.curtainSideAlt(baseName +"_left_upper_open", particle);
+        ModelFile side_middleOpen = decoBlockModels.curtainSide(baseName +"_middle_upper_open", particle);
+        ModelFile sideAlt_middleOpen = decoBlockModels.curtainSideAlt(baseName +"_middle_upper_open", particle);
+        ModelFile side_singleDownOpen = decoBlockModels.curtainSide(baseName +"_lower_open", particle);
+        ModelFile sideAlt_singleDownOpen = decoBlockModels.curtainSideAlt(baseName +"_lower_open", particle);
+        ModelFile side_rightDownOpen = decoBlockModels.curtainSide(baseName +"_right_lower_open", particle);
+        ModelFile sideAlt_rightDownOpen = decoBlockModels.curtainSideAlt(baseName +"_right_lower_open", particle);
+        ModelFile side_leftDownOpen = decoBlockModels.curtainSide(baseName +"_left_lower_open", particle);
+        ModelFile sideAlt_leftDownOpen = decoBlockModels.curtainSideAlt(baseName +"_left_lower_open", particle);
+        ModelFile side_middleDownOpen = decoBlockModels.curtainSide(baseName +"_middle_lower_open", particle);
+        ModelFile sideAlt_middleDownOpen = decoBlockModels.curtainSideAlt(baseName +"_middle_lower_open", particle);
+
+
+        curtainDefaultBlock(block, post, postEnds, rodSide, rodSideAlt, cap, capAlt, capDown, capDownAlt, side_middle, sideAlt_middle, side_middleDown, sideAlt_middleDown, side_singleOpen, sideAlt_singleOpen, side_rightOpen,
+                sideAlt_rightOpen, side_leftOpen, sideAlt_leftOpen, side_middleOpen, sideAlt_middleOpen, side_singleDownOpen, sideAlt_singleDownOpen,
+                side_rightDownOpen, sideAlt_rightDownOpen, side_leftDownOpen, sideAlt_leftDownOpen, side_middleDownOpen, sideAlt_middleDownOpen);
+    }
+
+    private void curtainDefaultBlock(Block block, ModelFile post, ModelFile postEnds, ModelFile rodSide, ModelFile rodSideAlt,
+                              ModelFile cap, ModelFile capAlt, ModelFile capDown, ModelFile capDownAlt,
+                              ModelFile side_middle, ModelFile sideAlt_middle, ModelFile side_middleDown, ModelFile sideAlt_middleDown,
+
+                              ModelFile side_singleOpen, ModelFile sideAlt_singleOpen, ModelFile side_rightOpen, ModelFile sideAlt_rightOpen,
+                              ModelFile side_leftOpen, ModelFile sideAlt_leftOpen, ModelFile side_middleOpen, ModelFile sideAlt_middleOpen,
+                              ModelFile side_singleDownOpen, ModelFile sideAlt_singleDownOpen, ModelFile side_rightDownOpen, ModelFile sideAlt_rightDownOpen,
+                              ModelFile side_leftDownOpen, ModelFile sideAlt_leftDownOpen, ModelFile side_middleDownOpen, ModelFile sideAlt_middleDownOpen) {
+
+        ModelFile[] sidesOpen = {side_singleOpen, side_leftOpen, side_middleOpen, side_rightOpen};
+        ModelFile[] sideAltsOpen = {sideAlt_singleOpen, sideAlt_leftOpen, sideAlt_middleOpen, sideAlt_rightOpen};
+        ModelFile[] sidesDownOpen = {side_singleDownOpen, side_leftDownOpen, side_middleDownOpen, side_rightDownOpen};
+        ModelFile[] sideAltsDownOpen = {sideAlt_singleDownOpen, sideAlt_leftDownOpen, sideAlt_middleDownOpen, sideAlt_rightDownOpen};
+
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(postEnds).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end()
+                .part().modelFile(post).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end();
+
+        PipeBlock.PROPERTY_BY_DIRECTION.entrySet().forEach(e -> {
+            Direction dir = e.getKey();
+
+            if (dir.getAxis().isHorizontal()) {
+                boolean alt = dir == Direction.SOUTH;
+                builder.part().modelFile(alt || dir == Direction.WEST ? capAlt : cap)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(getOppositeProperty(dir), false)
+                        .condition(getLeftProperty(dir), false)
+                        .condition(getRightProperty(dir), false)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.UP, false).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? capDownAlt : capDown)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(getOppositeProperty(dir), false)
+                        .condition(getLeftProperty(dir), false)
+                        .condition(getRightProperty(dir), false)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.UP, true).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? rodSideAlt : rodSide)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(PipeBlock.UP, false).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? sideAlt_middle : side_middle)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.DOWN, true)
+                        .end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? sideAlt_middleDown : side_middleDown)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.DOWN, false)
+                        .end();
+
+                for (int x=0; x<4; x++) {
+                    builder
+                            .part().modelFile(alt || dir == Direction.WEST ? sideAltsOpen[x] : sidesOpen[x])
+                            .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                            .condition(e.getValue(), true)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(PipeBlock.DOWN, true)
+                            .condition(ThreePositionsCurtainBlock.OPEN, true)
+                            .end()
+
+                            .part().modelFile(alt || dir == Direction.WEST ? sideAltsDownOpen[x] : sidesDownOpen[x])
+                            .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                            .condition(e.getValue(), true)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(PipeBlock.DOWN, false)
+                            .condition(ThreePositionsCurtainBlock.OPEN, true)
+                            .end();
+                }
+            }
+        });
+    }
+
+    private void curtainBeadedBlockState(RegistryObject<Block> block) {
+        curtainBeadedBlockInternal(block.get(), block.getId().toString(),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"));
+
+    }
+    private void curtainBeadedBlockInternal(Block block, String baseName,
+                                             ResourceLocation particle, ResourceLocation bars,
+                                             ResourceLocation edge) {
+        ModelFile post = decoBlockModels.barsPost(baseName, particle, edge);
+        ModelFile postEnds = decoBlockModels.barsPostEnds(baseName, particle, edge);
+        ModelFile rodSide = decoBlockModels.curtainRodSide(baseName, bars);
+        ModelFile rodSideAlt = decoBlockModels.curtainRodSideAlt(baseName, bars);
+
+        ModelFile side_middle = decoBlockModels.curtainSide(baseName, particle);
+        ModelFile sideAlt_middle = decoBlockModels.curtainSideAlt(baseName, particle);
+
+        ModelFile side_singleOpen = decoBlockModels.curtainSide(baseName +"_open", particle);
+        ModelFile sideAlt_singleOpen = decoBlockModels.curtainSideAlt(baseName +"_open", particle);
+        ModelFile side_rightOpen = decoBlockModels.curtainSide(baseName +"_right_open", particle);
+        ModelFile sideAlt_rightOpen = decoBlockModels.curtainSideAlt(baseName +"_right_open", particle);
+        ModelFile side_leftOpen = decoBlockModels.curtainSide(baseName +"_left_open", particle);
+        ModelFile sideAlt_leftOpen = decoBlockModels.curtainSideAlt(baseName +"_left_open", particle);
+        ModelFile side_middleOpen = decoBlockModels.curtainSide(baseName +"_middle_open", particle);
+        ModelFile sideAlt_middleOpen = decoBlockModels.curtainSideAlt(baseName +"_middle_open", particle);
+
+
+        curtainBeadedBlock(block, post, postEnds, rodSide, rodSideAlt, side_middle, sideAlt_middle, side_singleOpen, sideAlt_singleOpen, side_rightOpen,
+                sideAlt_rightOpen, side_leftOpen, sideAlt_leftOpen, side_middleOpen, sideAlt_middleOpen);
+    }
+
+    private void curtainBeadedBlock(Block block, ModelFile post, ModelFile postEnds, ModelFile rodSide, ModelFile rodSideAlt,
+                                     ModelFile side_middle, ModelFile sideAlt_middle,
+
+                                     ModelFile side_singleOpen, ModelFile sideAlt_singleOpen, ModelFile side_rightOpen, ModelFile sideAlt_rightOpen,
+                                     ModelFile side_leftOpen, ModelFile sideAlt_leftOpen, ModelFile side_middleOpen, ModelFile sideAlt_middleOpen) {
+
+        ModelFile[] sidesOpen = {side_singleOpen, side_leftOpen, side_middleOpen, side_rightOpen};
+        ModelFile[] sideAltsOpen = {sideAlt_singleOpen, sideAlt_leftOpen, sideAlt_middleOpen, sideAlt_rightOpen};
+
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(postEnds).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end()
+                .part().modelFile(post).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end();
+
+        PipeBlock.PROPERTY_BY_DIRECTION.entrySet().forEach(e -> {
+            Direction dir = e.getKey();
+
+            if (dir.getAxis().isHorizontal()) {
+                boolean alt = dir == Direction.SOUTH;
+                builder.part().modelFile(alt || dir == Direction.WEST ? sideAlt_middle : side_middle)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? rodSideAlt : rodSide)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(PipeBlock.UP, false).end();
+
+
+                for (int x=0; x<4; x++) {
+                    builder
+                            .part().modelFile(alt || dir == Direction.WEST ? sideAltsOpen[x] : sidesOpen[x])
+                            .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                            .condition(e.getValue(), true)
+                            .condition(ThreePositionsCurtainBlock.POSITION, x)
+                            .condition(ThreePositionsCurtainBlock.OPEN, true).end();
+                }
+            }
+        });
+    }
+
+    private void curtainBlindsBlockState(RegistryObject<Block> block) {
+        curtainBlindsBlockInternal(block.get(), block.getId().toString(),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"),
+                new ResourceLocation("minecraft", "block/iron_bars"));
+
+    }
+    private void curtainBlindsBlockInternal(Block block, String baseName,
+                                            ResourceLocation particle, ResourceLocation bars,
+                                            ResourceLocation edge) {
+        ModelFile post = decoBlockModels.barsPost(baseName, particle, edge);
+        ModelFile postEnds = decoBlockModels.barsPostEnds(baseName, particle, edge);
+        ModelFile rodSide = decoBlockModels.curtainRodSide(baseName, bars);
+        ModelFile rodSideAlt = decoBlockModels.curtainRodSideAlt(baseName, bars);
+
+        ModelFile side_middle = decoBlockModels.curtainSide(baseName + "_upper", particle);
+        ModelFile sideAlt_middle = decoBlockModels.curtainSideAlt(baseName + "_upper", particle);
+        ModelFile side_middleDown = decoBlockModels.curtainSide(baseName + "_lower", particle);
+        ModelFile sideAlt_middleDown = decoBlockModels.curtainSideAlt(baseName + "_lower", particle);
+
+        ModelFile side_middleOpen = decoBlockModels.curtainSide(baseName +"_upper_open", particle);
+        ModelFile sideAlt_middleOpen = decoBlockModels.curtainSideAlt(baseName +"_upper_open", particle);
+        ModelFile side_middleOpenDown = decoBlockModels.curtainSide(baseName +"_lower_open", particle);
+        ModelFile sideAlt_middleOpenDown = decoBlockModels.curtainSideAlt(baseName +"_lower_open", particle);
+
+
+        curtainBlindsBlock(block, post, postEnds, rodSide, rodSideAlt, side_middle, sideAlt_middle, side_middleDown, sideAlt_middleDown,
+                side_middleOpen, sideAlt_middleOpen, side_middleOpenDown, sideAlt_middleOpenDown);
+    }
+
+    private void curtainBlindsBlock(Block block, ModelFile post, ModelFile postEnds, ModelFile rodSide, ModelFile rodSideAlt,
+                                    ModelFile side_middle, ModelFile sideAlt_middle, ModelFile side_middleDown, ModelFile sideAlt_middleDown,
+                                    ModelFile side_middleOpen, ModelFile sideAlt_middleOpen,
+                                    ModelFile side_middleDownOpen, ModelFile sideAlt_middleDownOpen) {
+
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(postEnds).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end()
+                .part().modelFile(post).addModel().condition(PipeBlock.SOUTH, false)
+                .condition(PipeBlock.NORTH, false).condition(PipeBlock.WEST, false).condition(PipeBlock.EAST, false)
+                .end();
+
+        PipeBlock.PROPERTY_BY_DIRECTION.entrySet().forEach(e -> {
+            Direction dir = e.getKey();
+
+            if (dir.getAxis().isHorizontal()) {
+                boolean alt = dir == Direction.SOUTH;
+                builder.part().modelFile(alt || dir == Direction.WEST ? sideAlt_middle : side_middle)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.DOWN, true).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? sideAlt_middleDown : side_middleDown)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, false)
+                        .condition(PipeBlock.DOWN, false).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? sideAlt_middleOpen : side_middleOpen)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, true)
+                        .condition(PipeBlock.UP, false).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? sideAlt_middleDownOpen : side_middleDownOpen)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(ThreePositionsCurtainBlock.OPEN, true)
+                        .condition(PipeBlock.UP, true).end()
+
+                        .part().modelFile(alt || dir == Direction.WEST ? rodSideAlt : rodSide)
+                        .rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(PipeBlock.UP, false).end();
+
+            }
+        });
+    }
 
     //supply methods
     BooleanProperty getOppositeProperty (Direction dir){return PipeBlock.PROPERTY_BY_DIRECTION.get(dir.getOpposite());}

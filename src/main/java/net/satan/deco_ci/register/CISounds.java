@@ -18,6 +18,8 @@ public class CISounds {
 
     public static final RegistryObject<SoundEvent> CURTAIN_OPENS = registerSoundEvents("curtain_opens");
     public static final RegistryObject<SoundEvent> CURTAIN_CLOSES = registerSoundEvents("curtain_closes");
+    public static final RegistryObject<SoundEvent> BLINDS_OPENS = registerSoundEvents("blinds_opens");
+    public static final RegistryObject<SoundEvent> BLINDS_CLOSES = registerSoundEvents("blinds_closes");
 
 // sounds end here
 

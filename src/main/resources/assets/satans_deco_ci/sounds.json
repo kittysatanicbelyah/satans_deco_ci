@@ -16,5 +16,23 @@
         "name": "minecraft:block.wool.break"
       }
     ]
+  },
+  "blinds_opens": {
+  "subtitle": "sounds.satans_deco_ci.blinds_opens",
+  "sounds": [
+    {
+      "type": "event",
+      "name": "minecraft:block.wool.break"
+    }
+   ]
+  },
+"blinds_closes": {
+    "subtitle": "sounds.satans_deco_ci.blinds_closes",
+    "sounds": [
+     {
+    "type": "event",
+    "name": "minecraft:block.wool.break"
+    }
+   ]
   }
 }

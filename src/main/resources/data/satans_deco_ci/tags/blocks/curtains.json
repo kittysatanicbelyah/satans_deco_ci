@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "satans_deco_ci:curtain_white",
-    "satans_deco_ci:curtain_light_gray",
-    "satans_deco_ci:curtain_gray",
-    "satans_deco_ci:curtain_black",
-    "satans_deco_ci:curtain_red",
-    "satans_deco_ci:curtain_brown",
-    "satans_deco_ci:curtain_orange",
-    "satans_deco_ci:curtain_yellow",
-    "satans_deco_ci:curtain_lime",
-    "satans_deco_ci:curtain_green",
-    "satans_deco_ci:curtain_cyan",
-    "satans_deco_ci:curtain_light_blue",
-    "satans_deco_ci:curtain_blue",
-    "satans_deco_ci:curtain_purple",
-    "satans_deco_ci:curtain_magenta",
-    "satans_deco_ci:curtain_pink"
+    {
+      "id": "#satans_deco_ci:curtains/beaded",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/blinds",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/edge_trims",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/default",
+      "required": false
+    }
   ]
 }
