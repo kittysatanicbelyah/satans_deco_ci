@@ -33,7 +33,7 @@ Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [since 0.2.0] Port to 26.x
 - [since 0.2.0] Publish on Modrinth
 #### Blocks & Items
-- [since 0.3.0] Add Lambrequins
+- [since 0.3.0] Add Pelmets
 
 ### Changes
 - [since partitioning] Optimize datagen
