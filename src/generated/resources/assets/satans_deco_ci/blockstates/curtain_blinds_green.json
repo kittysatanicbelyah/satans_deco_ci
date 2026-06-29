@@ -1,0 +1,232 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_post_ends"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_post"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_side"
+      },
+      "when": {
+        "down": "true",
+        "north": "true",
+        "open": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_side"
+      },
+      "when": {
+        "down": "false",
+        "north": "true",
+        "open": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_open_side"
+      },
+      "when": {
+        "north": "true",
+        "open": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_open_side"
+      },
+      "when": {
+        "north": "true",
+        "open": "true",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_rod_side"
+      },
+      "when": {
+        "north": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_side_alt"
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_side_alt"
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_open_side_alt"
+      },
+      "when": {
+        "open": "true",
+        "south": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_open_side_alt"
+      },
+      "when": {
+        "open": "true",
+        "south": "true",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_rod_side_alt"
+      },
+      "when": {
+        "south": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "open": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "open": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "open": "true",
+        "up": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_open_side_alt",
+        "y": 90
+      },
+      "when": {
+        "open": "true",
+        "up": "true",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_rod_side_alt",
+        "y": 90
+      },
+      "when": {
+        "up": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_side",
+        "y": 90
+      },
+      "when": {
+        "down": "true",
+        "east": "true",
+        "open": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_side",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "true",
+        "open": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_upper_open_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "open": "true",
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_lower_open_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "open": "true",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "satans_deco_ci:block/curtain_blinds_green_rod_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "up": "false"
+      }
+    }
+  ]
+}

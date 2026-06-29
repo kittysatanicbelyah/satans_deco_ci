@@ -33,7 +33,6 @@ public class CITags {
 
     public static class CommonItems {
         public static final TagKey<Item> WOODEN_RODS = tag("rods/wooden");
-        public static final TagKey<Item> WOODEN_SLABS = tag("slabs/wooden");
         public static final TagKey<Item> STRINGS = tag("strings");
 
         private static TagKey<Item> tag(String name) {return ItemTags.create(new ResourceLocation("c", name));}
