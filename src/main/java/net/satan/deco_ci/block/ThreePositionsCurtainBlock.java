@@ -31,7 +31,6 @@ public class ThreePositionsCurtainBlock extends TemplateCurtainBlock {
         p_54221_.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, OPEN, POSITION, WATERLOGGED, POWERED);
     }
 
-
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext p_54200_) {
         BlockGetter blockgetter = p_54200_.getLevel();
