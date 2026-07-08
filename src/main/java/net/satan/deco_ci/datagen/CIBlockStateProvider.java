@@ -1,10 +1,12 @@
 package net.satan.deco_ci.datagen;
 
+import net.minecraft.client.model.Model;
 import net.minecraft.core.Direction;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -12,6 +14,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+import net.satan.deco_ci.block.TemplatePelmetBlock;
 import net.satan.deco_ci.block.ThreePositionsCurtainBlock;
 import net.satan.deco_ci.register.CIBlocks;
 import net.satan.deco_ci.satans_deco_ci;
@@ -101,7 +104,57 @@ public class CIBlockStateProvider extends BlockStateProvider {
         curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_PURPLE);
         curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_RED);
         curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_WHITE);
+
+        pelmetSolidBlockState(CIBlocks.PELMET_TEST);
+        pelmetSoftBlockState(CIBlocks.PELMET_TEST1);
+        pelmetCarvedBlockState(CIBlocks.PELMET_TEST2);
+        pelmetOrnateBlockState(CIBlocks.PELMET_TEST3);
 }
+
+    private void pelmetOrnateBlockState(RegistryObject<Block> block) {
+        ResourceLocation res = new ResourceLocation("block/vine");
+        ModelFile pelmet = decoBlockModels.pelmetOrnate(block.getId().getPath(), res, res, res, res);
+        ModelFile pelmetBars = decoBlockModels.pelmetOrnateBars(block.getId().getPath(),  res, res, res, res);
+        pelmetBlock(block.get(), pelmet, pelmetBars);
+    }
+
+    private void pelmetCarvedBlockState(RegistryObject<Block> block) {
+        ModelFile pelmet = decoBlockModels.pelmetCarved(block.getId().getPath(), new ResourceLocation("block/vine"));
+        ModelFile pelmetBars = decoBlockModels.pelmetCarvedBars(block.getId().getPath(), new ResourceLocation("block/vine"));
+        pelmetBlock(block.get(), pelmet, pelmetBars);
+    }
+
+    private void pelmetSoftBlockState(RegistryObject<Block> block) {
+        ModelFile pelmet = decoBlockModels.pelmetSoft(block.getId().getPath(), new ResourceLocation("block/vine"));
+        ModelFile pelmetBars = decoBlockModels.pelmetSoftBars(block.getId().getPath(), new ResourceLocation("block/vine"));
+        pelmetBlock(block.get(), pelmet, pelmetBars);
+    }
+
+    private void pelmetSolidBlockState(RegistryObject<Block> block) {
+        ModelFile pelmet = decoBlockModels.pelmetSolid(block.getId().getPath(), new ResourceLocation("block/vine"));
+        ModelFile pelmetBars = decoBlockModels.pelmetSolidBars(block.getId().getPath(), new ResourceLocation("block/vine"));
+        pelmetBlock(block.get(), pelmet, pelmetBars);
+    }
+
+    private void pelmetBlock(Block block, ModelFile pelmet, ModelFile pelmetBars){
+        MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+        PipeBlock.PROPERTY_BY_DIRECTION.entrySet().forEach(e -> {
+            Direction dir = e.getKey();
+            BooleanProperty bDir = TemplatePelmetBlock.PROPERTY_BY_DIRECTION_BARS.get(dir);
+
+            if (dir.getAxis().isHorizontal()) {
+                builder.part().modelFile(pelmet)
+                        .rotationY((int) dir.getOpposite().toYRot()).addModel()
+                        .condition(e.getValue(), true)
+                        .condition(bDir, false).end()
+
+                        .part().modelFile(pelmetBars)
+                        .rotationY((int) dir.getOpposite().toYRot()).addModel()
+                        .condition(bDir, true)
+                        .condition(e.getValue(), false).end();
+            }
+        });
+    }
 
     private void curtainsBlockState(RegistryObject<Block> block) {
         curtainsBlockInternal(block.get(), block.getId().toString(),

@@ -90,10 +90,68 @@ public class CIBlockModelProvider extends BlockModelProvider {
         curtainBlindsModels(CIBlocks.CURTAIN_BLINDS_BROWN);
         curtainBlindsModels(CIBlocks.CURTAIN_BLINDS_BLUE);
         curtainBlindsModels(CIBlocks.CURTAIN_BLINDS_BLACK);
+
+        pelmetSolidModels(CIBlocks.PELMET_TEST, true);
+        pelmetSoftModels(CIBlocks.PELMET_TEST1);
+        pelmetCarvedModels(CIBlocks.PELMET_TEST2);
+        pelmetOrnateModels(CIBlocks.PELMET_TEST3, false);
     //blocks end here
 }
 
 // registry objects
+
+    private BlockModelBuilder pelmetOrnateModels(RegistryObject<Block> block, boolean hasTinsel){
+        String name = block.getId().getPath();
+        ResourceLocation pelmet = new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_lime");
+        ResourceLocation metal = new ResourceLocation("block/gold_block");
+        ResourceLocation ornament = new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_gold");
+        ResourceLocation tinsel = hasTinsel ? new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_tinsel_pink")
+                : new ResourceLocation(satans_deco_ci.MODID, "block/null");
+
+        for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                pelmetOrnate(name, pelmet, metal, ornament, tinsel),
+                pelmetOrnateBars(name, pelmet, metal, ornament, tinsel)
+        )) {
+            return blockModelBuilder;
+        }
+        return null;
+    }
+
+    private BlockModelBuilder pelmetCarvedModels(RegistryObject<Block> block){
+        String name = block.getId().getPath();
+        ResourceLocation pelmet = new ResourceLocation("block/oak_planks");
+        for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                pelmetCarved(name, pelmet),
+                pelmetCarvedBars(name, pelmet)
+        )) {
+            return blockModelBuilder;
+        }
+        return null;
+    }
+
+    private BlockModelBuilder pelmetSoftModels(RegistryObject<Block> block){
+        String name = block.getId().getPath();
+        ResourceLocation pelmet = new ResourceLocation(satans_deco_ci.MODID, "block/curtain_default_lime_lower");
+        for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                pelmetSoft(name, pelmet),
+                pelmetSoftBars(name, pelmet)
+        )) {
+            return blockModelBuilder;
+        }
+        return null;
+    }
+
+    private BlockModelBuilder pelmetSolidModels(RegistryObject<Block> block, boolean isWooden){
+        String name = block.getId().getPath();
+        ResourceLocation pelmet = new ResourceLocation("block/oak_planks");
+        for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                pelmetSolid(name, pelmet),
+                pelmetSolidBars(name, pelmet)
+        )) {
+            return blockModelBuilder;
+        }
+        return null;
+    }
 
     private BlockModelBuilder curtainModels(RegistryObject<Block> block) {
         String name = block.getId().getPath();
@@ -346,5 +404,49 @@ public class CIBlockModelProvider extends BlockModelProvider {
         return singleTexture(name + "_down_cap_alt", new ResourceLocation(satans_deco_ci.MODID,
                 "block/curtain/curtain_down_cap_alt"), "bars", bars).renderType("cutout_mipped");
     }
-    
+
+    public BlockModelBuilder vine(String name, ResourceLocation vine) {
+        return singleTexture(name, new ResourceLocation( "block/vine"), "vine", vine).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetSolid(String name, ResourceLocation pelmet) {
+        return singleTexture(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_solid"), "pelmet", pelmet);
+    }
+
+    public BlockModelBuilder pelmetSolidBars(String name, ResourceLocation pelmet) {
+        return singleTexture(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_solid_bars"), "pelmet", pelmet);
+    }
+
+    public BlockModelBuilder pelmetSoft(String name, ResourceLocation pelmet) {
+        return singleTexture(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_soft"), "pelmet", pelmet).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetSoftBars(String name, ResourceLocation pelmet) {
+        return singleTexture(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_soft_bars"), "pelmet", pelmet).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetCarved(String name, ResourceLocation pelmet) {
+        return singleTexture(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_carved"), "pelmet", pelmet);
+    }
+
+    public BlockModelBuilder pelmetCarvedBars(String name, ResourceLocation pelmet) {
+        return singleTexture(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_carved_bars"), "pelmet", pelmet);
+    }
+
+    public BlockModelBuilder pelmetOrnate(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
+        return withExistingParent(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate"))
+                .texture("pelmet", pelmet)
+                .texture("metal", metal)
+                .texture("ornament", ornament)
+                .texture("tinsel", tinsel).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetOrnateBars(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
+        return withExistingParent(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate_bars"))
+                .texture("pelmet", pelmet)
+                .texture("metal", metal)
+                .texture("ornament", ornament)
+                .texture("tinsel", tinsel).renderType("cutout_mipped");
+    }
+
 }

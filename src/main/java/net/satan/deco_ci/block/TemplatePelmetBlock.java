@@ -47,7 +47,7 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
     protected static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION.entrySet().stream().filter((p_52346_) -> {
         return p_52346_.getKey().getAxis().isHorizontal();
     }).collect(Util.toMap());
-    protected static final ImmutableMap<Direction, BooleanProperty> PROPERTY_BY_DIRECTION_BARS = ImmutableMap.<Direction, BooleanProperty>builder()
+    public static final ImmutableMap<Direction, BooleanProperty> PROPERTY_BY_DIRECTION_BARS = ImmutableMap.<Direction, BooleanProperty>builder()
             .put(Direction.NORTH, BARS_NORTH)
             .put(Direction.SOUTH, BARS_SOUTH)
             .put(Direction.EAST, BARS_EAST)
@@ -58,10 +58,10 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
     private static final VoxelShape NORTH_AABB = Block.box(0.0D, 10.0D, 0.0D, 16.0D, 16.0D, 4.0D);
     private static final VoxelShape SOUTH_AABB = Block.box(0.0D, 10.0D, 12.0D, 16.0D, 16.0D, 16.0D);
 
-    private static final VoxelShape B_WEST_AABB = Block.box(-6.0D, 10.0D, 0.0D, -2.0D, 16.0D, 16.0D);
-    private static final VoxelShape B_EAST_AABB = Block.box(19.0D, 10.0D, 0.0D, 23.0D, 16.0D, 16.0D);
-    private static final VoxelShape B_NORTH_AABB = Block.box(0.0D, 10.0D, -6.0D, 16.0D, 16.0D, -2.0D);
-    private static final VoxelShape B_SOUTH_AABB = Block.box(0.0D, 10.0D, 19.0D, 16.0D, 16.0D, 23.0D);
+    private static final VoxelShape B_WEST_AABB = Block.box(-7.0D, 10.0D, 0.0D, -3.0D, 16.0D, 16.0D);
+    private static final VoxelShape B_EAST_AABB = Block.box(20.0D, 10.0D, 0.0D, 24.0D, 16.0D, 16.0D);
+    private static final VoxelShape B_NORTH_AABB = Block.box(0.0D, 10.0D, -7.0D, 16.0D, 16.0D, -3.0D);
+    private static final VoxelShape B_SOUTH_AABB = Block.box(0.0D, 10.0D, 20.0D, 16.0D, 16.0D, 24.0D);
 
     private final Map<BlockState, VoxelShape> shapesCache;
 
