@@ -9,6 +9,7 @@ import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
+import net.satan.deco_ci.datagen.util.CISupGen;
 import net.satan.deco_ci.register.CIBlocks;
 import net.satan.deco_ci.satans_deco_ci;
 
@@ -91,35 +92,131 @@ public class CIBlockModelProvider extends BlockModelProvider {
         curtainBlindsModels(CIBlocks.CURTAIN_BLINDS_BLUE);
         curtainBlindsModels(CIBlocks.CURTAIN_BLINDS_BLACK);
 
-        pelmetSolidModels(CIBlocks.PELMET_TEST, true);
-        pelmetSoftModels(CIBlocks.PELMET_TEST1);
-        pelmetCarvedModels(CIBlocks.PELMET_TEST2);
-        pelmetOrnateModels(CIBlocks.PELMET_TEST3, false);
-    //blocks end here
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_ACACIA);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_OAK);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_DARK_OAK);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_SPRUCE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_BAMBOO);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_BIRCH);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_CRIMSON);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_WARPED);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_JUNGLE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_CHERRY);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_MANGROVE);
+
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_ACACIA);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_OAK);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_DARK_OAK);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_SPRUCE);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_BAMBOO);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_BIRCH);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_CRIMSON);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_WARPED);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_JUNGLE);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_CHERRY);
+        pelmetCarvedModels(CIBlocks.PELMET_CARVED_MANGROVE);
+
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_BLACK);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_BLUE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_YELLOW);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_WHITE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_RED);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_CYAN);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_PINK);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_LIME);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_GREEN);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_MAGENTA);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_PURPLE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_ORANGE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_LIGHT_BLUE);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_BROWN);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_GRAY);
+        pelmetSolidModels(CIBlocks.PELMET_SOLID_LIGHT_GRAY);
+
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_BLACK);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_BLUE);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_YELLOW);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_WHITE);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_RED);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_CYAN);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_PINK);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_LIME);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_GREEN);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_MAGENTA);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_PURPLE);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_ORANGE);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_LIGHT_BLUE);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_BROWN);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_GRAY);
+        pelmetSoftModels(CIBlocks.PELMET_SOFT_LIGHT_GRAY);
+
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_BLACK, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_BLUE, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_YELLOW, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_WHITE, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_RED, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_CYAN, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_PINK, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_LIME, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_GREEN, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_MAGENTA, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_PURPLE, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_ORANGE, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_LIGHT_BLUE, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_BROWN, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_GRAY, false);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_GOLD_LIGHT_GRAY, false);
+
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BLACK, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BLUE, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_YELLOW, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_WHITE, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_RED, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_CYAN, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_PINK, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIME, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_GREEN, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_MAGENTA, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_PURPLE, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_ORANGE, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIGHT_BLUE, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BROWN, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_GRAY, true);
+        pelmetOrnateModels(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIGHT_GRAY, true);
+
+        //blocks end here
 }
 
 // registry objects
 
     private BlockModelBuilder pelmetOrnateModels(RegistryObject<Block> block, boolean hasTinsel){
         String name = block.getId().getPath();
-        ResourceLocation pelmet = new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_lime");
-        ResourceLocation metal = new ResourceLocation("block/gold_block");
-        ResourceLocation ornament = new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_gold");
-        ResourceLocation tinsel = hasTinsel ? new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_tinsel_pink")
+        ResourceLocation pelmet = CISupGen.matchCurtain(block.getId().getPath(), true);
+        ResourceLocation metal = CISupGen.matchOrnament(block.getId().getPath(), true);
+        ResourceLocation ornament = CISupGen.matchOrnament(block.getId().getPath(), false);
+        ResourceLocation tinsel = hasTinsel ? CISupGen.matchTinsel(block.getId().getPath(), true)
                 : new ResourceLocation(satans_deco_ci.MODID, "block/null");
-
-        for (BlockModelBuilder blockModelBuilder : Arrays.asList(
-                pelmetOrnate(name, pelmet, metal, ornament, tinsel),
-                pelmetOrnateBars(name, pelmet, metal, ornament, tinsel)
-        )) {
-            return blockModelBuilder;
+        if (hasTinsel) {
+            for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                    pelmetOrnateTinsel(name, pelmet, metal, ornament, tinsel),
+                    pelmetOrnateTinselBars(name, pelmet, metal, ornament, tinsel)
+            )) {
+                return blockModelBuilder;
+            }
+        } else {
+            for (BlockModelBuilder blockModelBuilder : Arrays.asList(
+                    pelmetOrnate(name, pelmet, metal, ornament),
+                    pelmetOrnateBars(name, pelmet, metal, ornament)
+            )) {
+                return blockModelBuilder;
+            }
         }
         return null;
     }
 
     private BlockModelBuilder pelmetCarvedModels(RegistryObject<Block> block){
         String name = block.getId().getPath();
-        ResourceLocation pelmet = new ResourceLocation("block/oak_planks");
+        ResourceLocation pelmet = CISupGen.matchTexture(block.getId().getPath(), true);
         for (BlockModelBuilder blockModelBuilder : Arrays.asList(
                 pelmetCarved(name, pelmet),
                 pelmetCarvedBars(name, pelmet)
@@ -131,7 +228,7 @@ public class CIBlockModelProvider extends BlockModelProvider {
 
     private BlockModelBuilder pelmetSoftModels(RegistryObject<Block> block){
         String name = block.getId().getPath();
-        ResourceLocation pelmet = new ResourceLocation(satans_deco_ci.MODID, "block/curtain_default_lime_lower");
+        ResourceLocation pelmet = CISupGen.matchCurtain(block.getId().getPath(), false);
         for (BlockModelBuilder blockModelBuilder : Arrays.asList(
                 pelmetSoft(name, pelmet),
                 pelmetSoftBars(name, pelmet)
@@ -141,9 +238,9 @@ public class CIBlockModelProvider extends BlockModelProvider {
         return null;
     }
 
-    private BlockModelBuilder pelmetSolidModels(RegistryObject<Block> block, boolean isWooden){
+    private BlockModelBuilder pelmetSolidModels(RegistryObject<Block> block){
         String name = block.getId().getPath();
-        ResourceLocation pelmet = new ResourceLocation("block/oak_planks");
+        ResourceLocation pelmet = CISupGen.matchTexture(block.getId().getPath(), CISupGen.isWooden(block));
         for (BlockModelBuilder blockModelBuilder : Arrays.asList(
                 pelmetSolid(name, pelmet),
                 pelmetSolidBars(name, pelmet)
@@ -433,16 +530,30 @@ public class CIBlockModelProvider extends BlockModelProvider {
         return singleTexture(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_carved_bars"), "pelmet", pelmet);
     }
 
-    public BlockModelBuilder pelmetOrnate(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
+    public BlockModelBuilder pelmetOrnate(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament) {
         return withExistingParent(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate"))
+                .texture("pelmet", pelmet)
+                .texture("metal", metal)
+                .texture("ornament", ornament).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetOrnateBars(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament) {
+        return withExistingParent(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate_bars"))
+                .texture("pelmet", pelmet)
+                .texture("metal", metal)
+                .texture("ornament", ornament).renderType("cutout_mipped");
+    }
+
+    public BlockModelBuilder pelmetOrnateTinsel(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
+        return withExistingParent(name, new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate_tinsel"))
                 .texture("pelmet", pelmet)
                 .texture("metal", metal)
                 .texture("ornament", ornament)
                 .texture("tinsel", tinsel).renderType("cutout_mipped");
     }
 
-    public BlockModelBuilder pelmetOrnateBars(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
-        return withExistingParent(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate_bars"))
+    public BlockModelBuilder pelmetOrnateTinselBars(String name, ResourceLocation pelmet, ResourceLocation metal, ResourceLocation ornament, ResourceLocation tinsel) {
+        return withExistingParent(name + "_bars", new ResourceLocation(satans_deco_ci.MODID, "block/pelmet/pelmet_ornate_tinsel_bars"))
                 .texture("pelmet", pelmet)
                 .texture("metal", metal)
                 .texture("ornament", ornament)

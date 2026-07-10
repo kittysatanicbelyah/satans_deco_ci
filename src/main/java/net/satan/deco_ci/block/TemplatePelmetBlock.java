@@ -206,20 +206,22 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
     public static boolean isNeighbourCool(BlockGetter p_57854_, BlockPos p_57855_, Direction p_57856_) {
         BlockState state = p_57854_.getBlockState(p_57855_);
         return MultifaceBlock.canAttachTo(p_57854_, p_57856_, p_57855_, state)
-                || ((state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))
+                || ((state.getBlock() instanceof IronBarsBlock || state.getBlock() instanceof FenceBlock
+                || state.is(BlockTags.WALLS)  || state.getBlock() instanceof StairBlock  || state.getBlock() instanceof SlabBlock)
                 && !(state.is(Blocks.AIR)));
     }
 
     private boolean isBars(BlockState state) {
       System.out.println("isBars&NotAir? " + ((state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))
               && !(state.is(Blocks.AIR))));
-        System.out.println("isBars? " + ((state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))));
-        return (state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))
+        System.out.println("isBars? " + ((state.getBlock() instanceof IronBarsBlock || state.getBlock() instanceof FenceBlock || state.is(BlockTags.WALLS))));
+        return (state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS) || state.getBlock() instanceof FenceBlock)
                 && !(state.is(Blocks.AIR));
     }
 
     private boolean isAttachedToCorrectInstance(BlockState state, boolean isFaceFull){
-        return ((!isExceptionForConnection(state) && isFaceFull || state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))
+        return ((!isExceptionForConnection(state) && isFaceFull || state.getBlock() instanceof IronBarsBlock  || state.getBlock() instanceof FenceBlock
+                || state.is(BlockTags.WALLS)  || state.getBlock() instanceof StairBlock  || state.getBlock() instanceof SlabBlock)
                 && !(state.is(Blocks.AIR)));
     }
 

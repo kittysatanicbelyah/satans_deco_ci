@@ -105,30 +105,98 @@ public class CIBlockStateProvider extends BlockStateProvider {
         curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_RED);
         curtainBlindsBlockState(CIBlocks.CURTAIN_BLINDS_WHITE);
 
-        pelmetSolidBlockState(CIBlocks.PELMET_TEST);
-        pelmetSoftBlockState(CIBlocks.PELMET_TEST1);
-        pelmetCarvedBlockState(CIBlocks.PELMET_TEST2);
-        pelmetOrnateBlockState(CIBlocks.PELMET_TEST3);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_ACACIA);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_OAK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_DARK_OAK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_SPRUCE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_BAMBOO);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_BIRCH);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_CRIMSON);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_WARPED);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_JUNGLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_CHERRY);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_MANGROVE);
+
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_ACACIA);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_OAK);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_DARK_OAK);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_SPRUCE);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_BAMBOO);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_BIRCH);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_CRIMSON);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_WARPED);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_JUNGLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_CHERRY);
+        pelmetSolidBlockState(CIBlocks.PELMET_CARVED_MANGROVE);
+
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_BLACK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_YELLOW);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_WHITE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_RED);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_CYAN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_PINK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_LIME);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_GREEN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_MAGENTA);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_PURPLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_ORANGE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_LIGHT_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_BROWN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_GRAY);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOLID_LIGHT_GRAY);
+
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_BLACK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_YELLOW);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_WHITE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_RED);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_CYAN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_PINK);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_LIME);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_GREEN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_MAGENTA);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_PURPLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_ORANGE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_LIGHT_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_BROWN);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_GRAY);
+        pelmetSolidBlockState(CIBlocks.PELMET_SOFT_LIGHT_GRAY);
+
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_BLACK);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_YELLOW);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_WHITE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_RED);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_CYAN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_PINK);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_LIME);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_GREEN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_MAGENTA);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_PURPLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_ORANGE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_LIGHT_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_BROWN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_GRAY);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_GOLD_LIGHT_GRAY);
+        
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BLACK);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_YELLOW);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_WHITE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_RED);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_CYAN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_PINK);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIME);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_GREEN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_MAGENTA);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_PURPLE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_ORANGE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIGHT_BLUE);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_BROWN);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_GRAY);
+        pelmetSolidBlockState(CIBlocks.PELMET_ORNATE_TINSEL_GOLD_LIGHT_GRAY);
 }
-
-    private void pelmetOrnateBlockState(RegistryObject<Block> block) {
-        ResourceLocation res = new ResourceLocation("block/vine");
-        ModelFile pelmet = decoBlockModels.pelmetOrnate(block.getId().getPath(), res, res, res, res);
-        ModelFile pelmetBars = decoBlockModels.pelmetOrnateBars(block.getId().getPath(),  res, res, res, res);
-        pelmetBlock(block.get(), pelmet, pelmetBars);
-    }
-
-    private void pelmetCarvedBlockState(RegistryObject<Block> block) {
-        ModelFile pelmet = decoBlockModels.pelmetCarved(block.getId().getPath(), new ResourceLocation("block/vine"));
-        ModelFile pelmetBars = decoBlockModels.pelmetCarvedBars(block.getId().getPath(), new ResourceLocation("block/vine"));
-        pelmetBlock(block.get(), pelmet, pelmetBars);
-    }
-
-    private void pelmetSoftBlockState(RegistryObject<Block> block) {
-        ModelFile pelmet = decoBlockModels.pelmetSoft(block.getId().getPath(), new ResourceLocation("block/vine"));
-        ModelFile pelmetBars = decoBlockModels.pelmetSoftBars(block.getId().getPath(), new ResourceLocation("block/vine"));
-        pelmetBlock(block.get(), pelmet, pelmetBars);
-    }
 
     private void pelmetSolidBlockState(RegistryObject<Block> block) {
         ModelFile pelmet = decoBlockModels.pelmetSolid(block.getId().getPath(), new ResourceLocation("block/vine"));

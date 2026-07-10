@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "satans_deco_ci:pelmet_soft_white",
+    "satans_deco_ci:pelmet_soft_gray",
+    "satans_deco_ci:pelmet_soft_gray",
+    "satans_deco_ci:pelmet_soft_black",
+    "satans_deco_ci:pelmet_soft_red",
+    "satans_deco_ci:pelmet_soft_brown",
+    "satans_deco_ci:pelmet_soft_orange",
+    "satans_deco_ci:pelmet_soft_yellow",
+    "satans_deco_ci:pelmet_soft_lime",
+    "satans_deco_ci:pelmet_soft_green",
+    "satans_deco_ci:pelmet_soft_cyan",
+    "satans_deco_ci:pelmet_soft_light_blue",
+    "satans_deco_ci:pelmet_soft_blue",
+    "satans_deco_ci:pelmet_soft_purple",
+    "satans_deco_ci:pelmet_soft_magenta",
+    "satans_deco_ci:pelmet_soft_pink"
+  ]
+}
