@@ -21,7 +21,6 @@ Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Planned]
 ### Added
-#### Unclassified
 - [since partitioning] Add German (de_de) translation
 - [since partitioning] Add Kazakh (kk_kz) translation
 - [since partitioning] Add Polish (pl_pl) translation
@@ -32,8 +31,6 @@ Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [since 0.2.0] Port to 1.21.1
 - [since 0.2.0] Port to 26.x
 - [since 0.2.0] Publish on Modrinth
-#### Blocks & Items
-- [since 0.3.0] Add Pelmets
 
 ### Changes
 - [since partitioning] Optimize datagen
@@ -41,6 +38,15 @@ Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Fixes
 - [since 0.3.0] Fix Block properties bloat
 
+## [0.4.0] - 2026-07-11
+### Added
+#### Game Mechanics
+- Add tags for Pelmets ([676a028](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/676a0281e86b08160e1c81d58da4c808270eb736), [64e4c56](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/64e4c56d658af4088538fc4244bc4dccee35e3ce))
+- Add CISupGen ([676a028](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/676a0281e86b08160e1c81d58da4c808270eb736)
+#### Blocks & Items
+- Add Pelmet blocks ([6ff40e4](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/6ff40e4dd986776244e5d4cfc8421e07bd15ae6a), [676a028](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/676a0281e86b08160e1c81d58da4c808270eb736))
+#### Textures & Models
+- Add textures and models for Pelmets  ([f7e5707](https://github.com/kittysatanicbelyah/satans_deco_ci/commit/f7e5707522beac8771891b4acc5113bc2171d774))
 
 ## [0.3.0] - 2026-06-29
 ### Added
