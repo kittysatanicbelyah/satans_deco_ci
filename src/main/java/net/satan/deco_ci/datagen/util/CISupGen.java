@@ -13,14 +13,12 @@ import net.minecraftforge.registries.RegistryObject;
 import net.satan.deco_ci.register.CITags;
 import net.satan.deco_ci.satans_deco_ci;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
+import java.util.Objects;
 
 public interface CISupGen {
     //for pelmets
     String[] SupportedWood = {"oak", "spruce", "birch", "dark_oak", "jungle", "bamboo", "crimson", "warped", "acacia", "cherry", "mangrove"};
-    String[] SupportedModWood = {"none"};
     String[] SupportedColors = {"black", "gray", "red", "green", "blue", "orange", "lime", "brown",
             "light_blue", "pink", "purple", "yellow", "magenta", "cyan", "light_gray", "white"};
     String[] PelmetOrnates = {"gold"};
@@ -45,38 +43,24 @@ public interface CISupGen {
 
     static boolean isWooden(RegistryObject<Block> block) {
        boolean wood = false;
-       boolean modWood = false;
         for (int x=0; x<SupportedWood.length; x++) {
             wood = block.getId().getPath().contains(SupportedWood[x]);
             if (wood) break;
         }
-        if (!wood) {
-            for (int x=0; x<SupportedModWood.length; x++) {
-                modWood = block.getId().getPath().contains(SupportedModWood[x]);
-                if (modWood) break;
-            }
-        }
         System.out.println("[" + LocalTime.now() +"] [" + satans_deco_ci.MODID + "/DataGenerator]: " + block.getId().getPath()
-                + " isWooden? " + (wood || modWood) + " is modWood? " + modWood);
-        return wood || modWood;
+                + " isWooden? " + (wood));
+        return wood;
     }
 
     static boolean isWooden(ItemLike block) {
         boolean wood = false;
-        boolean modWood = false;
         for (int x=0; x<SupportedWood.length; x++) {
             wood = block.asItem().toString().contains(SupportedWood[x]);
             if (wood) break;
         }
-        if (!wood) {
-            for (int x=0; x<SupportedModWood.length; x++) {
-                modWood = block.asItem().toString().contains(SupportedModWood[x]);
-                if (modWood) break;
-            }
-        }
         System.out.println("[" + LocalTime.now() +"] [" + satans_deco_ci.MODID + "/DataGenerator]: " + block.asItem().toString()
-                + " isWooden? " + (wood || modWood) + " is modWood? " + modWood);
-        return wood || modWood;
+                + " isWooden? " + (wood));
+        return wood;
     }
 
     static boolean isTinsel(ItemLike item){
@@ -87,22 +71,12 @@ public interface CISupGen {
         ResourceLocation res = new ResourceLocation("block/vine");
         if (isWooden) {
             boolean oak = false;
-            boolean isMod = true;
             for (int x = 0; x < SupportedWood.length; x++) {
                 if (name.contains(SupportedWood[x])) {
-                    oak = SupportedWood[x] == "oak" && name.contains("dark_oak");
+                    oak = Objects.equals(SupportedWood[x], "oak") && name.contains("dark_oak");
 
                     if (!oak) {
                         res = new ResourceLocation("block/" + SupportedWood[x] + "_planks");
-                        isMod = false;
-                        break;
-                    }
-                }
-            }
-            if (isMod) {
-                for (int x = 0; x < SupportedModWood.length; x++) {
-                    if (name.contains(SupportedModWood[x])) {
-                        res = new ResourceLocation("block/" + SupportedModWood[x] + "_planks");
                         break;
                     }
                 }
@@ -111,8 +85,8 @@ public interface CISupGen {
             boolean color = false;
             for (int x = 0; x < SupportedColors.length; x++) {
                 if (name.contains(SupportedColors[x])) {
-                    color = (SupportedColors[x] == "gray" && name.contains("light_gray"))
-                            || (SupportedColors[x] == "blue" && name.contains("light_blue"));
+                    color = (Objects.equals(SupportedColors[x], "gray") && name.contains("light_gray"))
+                            || (Objects.equals(SupportedColors[x], "blue") && name.contains("light_blue"));
 
                     if (!color) {
                         res = new ResourceLocation("block/" + SupportedColors[x] + "_wool");
@@ -129,8 +103,8 @@ public interface CISupGen {
         boolean color = false;
         for (int x = 0; x < SupportedColors.length; x++) {
             if (name.contains(SupportedColors[x])) {
-                color = (SupportedColors[x] == "gray" && name.contains("light_gray"))
-                        || (SupportedColors[x] == "blue" && name.contains("light_blue"));
+                color = (Objects.equals(SupportedColors[x], "gray") && name.contains("light_gray"))
+                        || (Objects.equals(SupportedColors[x], "blue") && name.contains("light_blue"));
 
                 if (!color) {
                     res = isOrnate ? new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_" + SupportedColors[x])
@@ -159,8 +133,8 @@ public interface CISupGen {
         boolean color = false;
         for (int x = 0; x < SupportedColors.length; x++) {
             if (name.contains(SupportedColors[x])) {
-                color = (SupportedColors[x] == "gray" && name.contains("light_gray"))
-                        || (SupportedColors[x] == "blue" && name.contains("light_blue"));
+                color = (Objects.equals(SupportedColors[x], "gray") && name.contains("light_gray"))
+                        || (Objects.equals(SupportedColors[x], "blue") && name.contains("light_blue"));
 
                 if (!color) {
                     res = doOpposites ?  new ResourceLocation(satans_deco_ci.MODID, "block/pelmet_ornate_tinsel_" + COLOR_DICHOTOMY.get(SupportedColors[x]))
@@ -178,10 +152,10 @@ public interface CISupGen {
         for(int x = 0; x<PelmetOrnates.length; x++) {
             if (name.contains(PelmetOrnates[x])) {
                 if (hasTinsel){
-                    tag = PelmetOrnates[x] == "gold" ? CITags.CIItems.ORNATE_TINSEL_GOLD_PELMETS : tag;
+                    tag = PelmetOrnates[x].equals("gold") ? CITags.CIItems.ORNATE_TINSEL_GOLD_PELMETS : tag;
                     break;
                 } else {
-                    tag = PelmetOrnates[x] == "gold" ? CITags.CIItems.ORNATE_NO_TINSEL_GOLD_PELMETS : tag;
+                    tag = PelmetOrnates[x].equals("gold") ? CITags.CIItems.ORNATE_NO_TINSEL_GOLD_PELMETS : tag;
                     break;
                 }
             }
