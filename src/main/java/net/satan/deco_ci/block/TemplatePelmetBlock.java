@@ -168,7 +168,6 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
                 ++i;
             }
         }
-        System.out.println("canSurvive:"+i + "?:" + (i>0));
         return i > 0;
     }
 
@@ -199,7 +198,6 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
     // supply methods
     public boolean isSurvivable(BlockGetter level, BlockPos pos, Direction dir) {
         BlockPos blockpos = pos.relative(dir);
-        System.out.println("isSurvivable:"+isNeighbourCool(level, blockpos, dir));
         return isNeighbourCool(level, blockpos, dir);
     }
 
@@ -214,8 +212,7 @@ public class TemplatePelmetBlock extends Block implements SimpleWaterloggedBlock
     private boolean isBars(BlockState state) {
       System.out.println("isBars&NotAir? " + ((state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS))
               && !(state.is(Blocks.AIR))));
-        System.out.println("isBars? " + ((state.getBlock() instanceof IronBarsBlock || state.getBlock() instanceof FenceBlock || state.is(BlockTags.WALLS))));
-        return (state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS) || state.getBlock() instanceof FenceBlock)
+         return (state.getBlock() instanceof IronBarsBlock || state.is(BlockTags.WALLS) || state.getBlock() instanceof FenceBlock)
                 && !(state.is(Blocks.AIR));
     }
 

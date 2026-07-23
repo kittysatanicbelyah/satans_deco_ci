@@ -1,12 +1,10 @@
 package net.satan.deco_ci.datagen;
 
-import net.minecraft.client.model.Model;
 import net.minecraft.core.Direction;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -213,13 +211,11 @@ public class CIBlockStateProvider extends BlockStateProvider {
             if (dir.getAxis().isHorizontal()) {
                 builder.part().modelFile(pelmet)
                         .rotationY((int) dir.getOpposite().toYRot()).addModel()
-                        .condition(e.getValue(), true)
-                        .condition(bDir, false).end()
+                        .condition(e.getValue(), true).end()
 
                         .part().modelFile(pelmetBars)
                         .rotationY((int) dir.getOpposite().toYRot()).addModel()
-                        .condition(bDir, true)
-                        .condition(e.getValue(), false).end();
+                        .condition(bDir, true).end();
             }
         });
     }
