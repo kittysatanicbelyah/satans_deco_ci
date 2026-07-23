@@ -244,7 +244,7 @@ public class CIRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('A', ingredient2).define('B', CITags.CommonItems.STRINGS).unlockedBy(getHasName(ingredient), has(ingredient))
                 .save(recipe, satans_deco_ci.MODID + ":" + "added_tinsels_" + getItemName(result));
 
-        ShapelessRecipeBuilder.shapeless(category, result, 1).requires(CISupGen.ornamentTag(result.asItem().toString(), false))
+        ShapelessRecipeBuilder.shapeless(category, result, 1).requires(CISupGen.ornamentTag(result.asItem().toString(), true))
                 .requires(dye)
                 .unlockedBy(getHasName(ingredient), has(ingredient))
                 .save(recipe, satans_deco_ci.MODID + ":" + "dyed_to_" + getItemName(result));

@@ -22,8 +22,8 @@ public class CITags {
         public static final TagKey<Item> SOFT_PELMETS = tag("pelmets/softs");
         public static final TagKey<Item> ORNATE_PELMETS = tag("pelmets/ornates");
 
-        public static final TagKey<Item> SOLID_WOOL_PELMETS = tag("pelmets/ornates/wool");
-        public static final TagKey<Item> SOLID_WOODEN_PELMETS = tag("pelmets/ornates/wood");
+        public static final TagKey<Item> SOLID_WOOL_PELMETS = tag("pelmets/solids/wool");
+        public static final TagKey<Item> SOLID_WOODEN_PELMETS = tag("pelmets/solids/wood");
 
         public static final TagKey<Item> ORNATE_TINSEL_PELMETS = tag("pelmets/ornates/tinsel");
         public static final TagKey<Item> ORNATE_NO_TINSEL_PELMETS = tag("pelmets/ornates/no_tinsel");
