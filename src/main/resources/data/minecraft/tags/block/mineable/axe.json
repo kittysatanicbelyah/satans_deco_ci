@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#satans_deco_ci:pelmets/solids/wood",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:pelmets/carved",
+      "required": false
+    }
+  ]
+}

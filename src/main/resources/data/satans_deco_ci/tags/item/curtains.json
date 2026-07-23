@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#satans_deco_ci:curtains/beaded",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/blinds",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/edge_trims",
+      "required": false
+    },
+    {
+      "id": "#satans_deco_ci:curtains/default",
+      "required": false
+    }
+  ]
+}

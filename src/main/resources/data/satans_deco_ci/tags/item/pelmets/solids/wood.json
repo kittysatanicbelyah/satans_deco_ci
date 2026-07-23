@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "satans_deco_ci:pelmet_solid_oak",
+    "satans_deco_ci:pelmet_solid_dark_oak",
+    "satans_deco_ci:pelmet_solid_spruce",
+    "satans_deco_ci:pelmet_solid_birch",
+    "satans_deco_ci:pelmet_solid_jungle",
+    "satans_deco_ci:pelmet_solid_bamboo",
+    "satans_deco_ci:pelmet_solid_acacia",
+    "satans_deco_ci:pelmet_solid_crimson",
+    "satans_deco_ci:pelmet_solid_warped",
+    "satans_deco_ci:pelmet_solid_cherry",
+    "satans_deco_ci:pelmet_solid_mangrove"
+  ]
+}

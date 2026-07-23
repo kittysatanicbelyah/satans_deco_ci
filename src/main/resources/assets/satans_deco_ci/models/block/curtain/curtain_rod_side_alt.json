@@ -1,0 +1,18 @@
+{
+	"format_version": "1.9.0",
+	"ambientocclusion": false,
+	"elements": [
+		{
+			"from": [7, 14.001, 8],
+			"to": [9, 16.001, 16.001],
+			"faces": {
+				"north": {"uv": [0, 0, 2, 2], "texture": "#rod", "cullface": "north"},
+				"east": {"uv": [0, 0, 8.001, 2], "texture": "#rod"},
+				"south": {"uv": [6, 0, 8, 2], "texture": "#rod"},
+				"west": {"uv": [0, 0, 8.001, 2], "texture": "#rod"},
+				"up": {"uv": [0, 4, 8.001, 6], "rotation": 90, "texture": "#rod"},
+				"down": {"uv": [0, 2, 8.001, 4], "rotation": 90, "texture": "#rod"}
+			}
+		}
+	]
+}
